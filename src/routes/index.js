@@ -3,7 +3,7 @@ const cors = require("cors");
 const user = require("./user.js");
 const endereco = require("./endereco.js");
 const material = require("./material.js");
-const inventario = require("./inventario.js");
+const inventario = require("./Inventario.js");
 const demandaConferente = require("./demandaConferente.js");
 const contagem = require("./contagem.js");
 
