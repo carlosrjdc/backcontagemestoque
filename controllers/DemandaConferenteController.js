@@ -22,7 +22,7 @@ class EnderecoController {
         where: {
           [Op.and]: [
             { conferenteId: conferente },
-            { Status: { [Op.is]: null } },
+            { Finalizado: { [Op.is]: null } },
           ],
         },
       });
