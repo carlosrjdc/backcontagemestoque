@@ -31,7 +31,7 @@ class EnderecoController {
 
   static atualizarRegistro = async (req, res) => {
     try {
-      const registro = await contagem.update(req.body, {
+      const registro = await demandaConferente.update(req.body, {
         where: {
           id: req.params.id,
         },
