@@ -28,6 +28,19 @@ class EnderecoController {
       return res.status(500).json(erro.message);
     }
   };
+
+  static atualizarRegistro = async (req, res) => {
+    try {
+      const registro = await contagem.update(req.body, {
+        where: {
+          id: req.params.id,
+        },
+      });
+      res.status(200).json(registro);
+    } catch (erro) {
+      return res.status(500).json(erro.message);
+    }
+  };
 }
 
 module.exports = EnderecoController;

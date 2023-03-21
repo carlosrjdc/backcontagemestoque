@@ -8,5 +8,9 @@ router.get(
   "/buscardemandas/:conferente/:status",
   demandaConferenteController.buscarDemandas
 );
+router.put(
+  "atualizardemanda/:id",
+  demandaConferenteController.atualizarRegistro
+);
 
 module.exports = router;
