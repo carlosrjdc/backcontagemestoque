@@ -9,7 +9,7 @@ router.get(
   demandaConferenteController.buscarDemandas
 );
 router.put(
-  "atualizardemanda/:id",
+  "/atualizardemanda/:id",
   demandaConferenteController.atualizarRegistro
 );
 
