@@ -20,7 +20,10 @@ class EnderecoController {
     try {
       const registro = await demandaConferente.findAll({
         where: {
-          [Op.and]: [{ conferenteId: conferente }, { Status: status }],
+          [Op.and]: [
+            { conferenteId: conferente },
+            { Status: { [Op.is]: null } },
+          ],
         },
       });
       res.status(200).json(registro);
