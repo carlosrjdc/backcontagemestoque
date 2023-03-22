@@ -62,6 +62,14 @@ class EnderecoController {
       return res.status(500).json(erro.message);
     }
   };
+  static todosMateriais = async (req, res) => {
+    try {
+      const registro = await material.findAll();
+      res.status(200).json(registro);
+    } catch (erro) {
+      return res.status(500).json(erro.message);
+    }
+  };
 }
 
 module.exports = EnderecoController;

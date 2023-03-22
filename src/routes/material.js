@@ -14,5 +14,6 @@ router.post(
   materialController.InputEmMassaSku
 );
 router.get("/buscarmaterial/:id", materialController.buscarItem);
+router.get("/allmaterial", materialController.buscarItem);
 
 module.exports = router;
