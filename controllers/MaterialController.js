@@ -1,5 +1,6 @@
 const db = require("../models");
 const excelToJson = require("convert-excel-to-json");
+const dadosAtualizar = require("./arquivo/atualizar.js");
 require("dotenv").config();
 const { Op } = require("sequelize");
 
@@ -66,6 +67,26 @@ class EnderecoController {
     try {
       const registro = await material.findAll();
       res.status(200).json(registro);
+    } catch (erro) {
+      return res.status(500).json(erro.message);
+    }
+  };
+
+  static atualizarRegistros = async (req, res) => {
+    dadosAtualizar.map((item) => console.log(item));
+    try {
+      const registro = await dadosAtualizar.map(async (item) => {
+        const atualizar = await material.update(
+          { EAN14CX: item.ean },
+          {
+            where: {
+              id: parseInt(item.id),
+            },
+          }
+        );
+      });
+
+      res.status(200).json("ok");
     } catch (erro) {
       return res.status(500).json(erro.message);
     }

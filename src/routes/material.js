@@ -16,4 +16,6 @@ router.post(
 router.get("/buscarmaterial/:id", materialController.buscarItem);
 router.get("/allmaterial", materialController.todosMateriais);
 
+router.put("/atualizarmaterial", materialController.atualizarRegistros);
+
 module.exports = router;
