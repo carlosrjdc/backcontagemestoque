@@ -90,6 +90,10 @@ module.exports = (sequelize, DataTypes) => {
       UnidadMedida: {
         type: DataTypes.STRING,
       },
+      Unidade: {
+        type: DataTypes.INTEGER,
+      },
+
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE,
