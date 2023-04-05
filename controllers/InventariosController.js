@@ -20,7 +20,7 @@ class EnderecoController {
       const registro = await inventario.findAll({
         where: {
           Finalizado: {
-            [Op.ne]: null,
+            [Op.is]: null,
           },
         },
       });

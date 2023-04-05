@@ -13,4 +13,6 @@ router.put(
   demandaConferenteController.atualizarRegistro
 );
 
+router.get("/demandaporid/:id", demandaConferenteController.buscarDemandaporID);
+
 module.exports = router;

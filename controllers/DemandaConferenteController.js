@@ -15,6 +15,17 @@ class EnderecoController {
     }
   };
 
+  static buscarDemandaporID = async (req, res) => {
+    try {
+      const registro = await demandaConferente.findAll({
+        inventarioDemandaId: req.params.id,
+      });
+      res.status(200).json(registro);
+    } catch (erro) {
+      return res.status(500).json(erro.message);
+    }
+  };
+
   static buscarDemandas = async (req, res) => {
     const { conferente, status } = req.params;
     try {
